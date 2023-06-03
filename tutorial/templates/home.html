@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página para registrar nomes:</h1>
+    <form method='POST' class='form-register', style="color: whitesmoke;">
+            
+        {{ form.hidden_tag() }}
+
+        {{ form.nome.label() }}
+        {{ form.nome(class='form-control', placeholder='Insira seu nome: ') }}
+
+        <br>
+        <div class="d-grid">
+            {{ form.submit(class='btn btn-lg btn-success') }}
+        </div>
+        
+        <br>
+        <div class="checkbox mb-3">
+            <a href="{{url_for('page_show')}}">Mostrar nomes cadastrados</a>
+
+        </div>
+    </form>
+
+
+    
+</body>
+</html>
